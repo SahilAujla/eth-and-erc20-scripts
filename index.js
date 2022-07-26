@@ -14,6 +14,7 @@ let erc20Contract;
 
 
 const init = async () => {
+    // change "maticmum" to "matic" on the polygon mainnet.
     provider = new ethers.providers.AlchemyProvider("maticmum", ALCHEMY_API_KEY_URL);
 
         console.log("Provider created");
@@ -34,7 +35,7 @@ const init = async () => {
     );
 
     const gasLimitForTx = await erc20Contract.estimateGas.transfer(toAddress, 10000);
-       console.log("gasLimit:",ethers.BigNumber.from(gasLimitForTx).toNumber());
+       console.log("gasLimit:", ethers.BigNumber.from(gasLimitForTx).toNumber());
 
     erc20Contract.transfer(toAddress, 10000).then(() => {
         console.log("ERC20 tokens sent...Done!");
