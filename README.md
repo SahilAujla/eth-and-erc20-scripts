@@ -1,4 +1,4 @@
-# ETH & ERC20 send scripts
+# ETH & ERC20 scripts
 
 `sendERC20.js` - script for ERC20 token transfers using ethers.js and estimating `gasLimit` ahead of time.
 
